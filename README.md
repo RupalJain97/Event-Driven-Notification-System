@@ -7,20 +7,20 @@ The Event-Driven Notification System is a scalable and efficient system designed
 ## Features
 
 1. Real-Time Event Streaming:
-* Handles real-time ingestion of events via Kafka producers.
-* Supports high-throughput event streams with minimal latency.
+   * Handles real-time ingestion of events via Kafka producers.
+   * Supports high-throughput event streams with minimal latency.
 2. Multi-Channel Notification Support:
-* Sends notifications via email, SMS, and push channels.
-* Customizable notification formats based on user preferences.
+   * Sends notifications via email, SMS, and push channels.
+   * Customizable notification formats based on user preferences.
 3. Retry Mechanism for Failed Events:
-* Implements a retry mechanism using Kafka’s dead-letter queues for handling failed events.
-* Ensures 99.9% reliability in notification delivery.
+   * Implements a retry mechanism using Kafka’s dead-letter queues for handling failed events.
+   * Ensures 99.9% reliability in notification delivery.
 4. Event Filtering and Processing:
-* Filters and processes events dynamically using Kafka Streams.
-* Supports conditional notification triggers based on event metadata.
+   * Filters and processes events dynamically using Kafka Streams.
+   * Supports conditional notification triggers based on event metadata.
 5. Scalability and Fault Tolerance:
-* Built on Apache Kafka’s distributed architecture to scale with increasing event volumes.
-* Ensures fault tolerance through topic replication and consumer group balancing.
+   * Built on Apache Kafka’s distributed architecture to scale with increasing event volumes.
+   * Ensures fault tolerance through topic replication and consumer group balancing.
 
 ## Technologies Used
 
@@ -37,13 +37,13 @@ The Event-Driven Notification System is a scalable and efficient system designed
 1. Producers:
    * Event producers publish events (e.g., user actions, system updates) to Kafka topics.
 2. Consumers:
-  * Kafka consumers process events from notification_events and route them to the appropriate notification channel (email, SMS, push).
+   * Kafka consumers process events from notification_events and route them to the appropriate notification channel (email, SMS, push).
 3. Dead-Letter Queue:
-  * Failed events are pushed to a retry topic for reprocessing.
-  * Consumers handle retry logic with exponential backoff.
+   * Failed events are pushed to a retry topic for reprocessing.
+   * Consumers handle retry logic with exponential backoff.
 4. Multi-Channel Notification:
-  * Channels (email, SMS, push) are determined dynamically based on event metadata.
-  * Each channel has its own service for processing and delivery.
+   * Channels (email, SMS, push) are determined dynamically based on event metadata.
+   * Each channel has its own service for processing and delivery.
 5. Monitoring and Metrics:
-  * Kafka performance is tracked with Prometheus and visualized in Grafana.
-  * Consumer lag and event throughput metrics are monitored.
+   * Kafka performance is tracked with Prometheus and visualized in Grafana.
+   * Consumer lag and event throughput metrics are monitored.
