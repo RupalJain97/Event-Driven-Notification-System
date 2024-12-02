@@ -34,16 +34,16 @@ The Event-Driven Notification System is a scalable and efficient system designed
 
 ## Architecture
 
-* Producers:
-1. Event producers publish events (e.g., user actions, system updates) to Kafka topics.
-* Consumers:
-1. Kafka consumers process events from notification_events and route them to the appropriate notification channel (email, SMS, push).
-* Dead-Letter Queue:
-1. Failed events are pushed to a retry topic for reprocessing.
-2. Consumers handle retry logic with exponential backoff.
-* Multi-Channel Notification:
-1. Channels (email, SMS, push) are determined dynamically based on event metadata.
-2. Each channel has its own service for processing and delivery.
-* Monitoring and Metrics:
-1. Kafka performance is tracked with Prometheus and visualized in Grafana.
-2. Consumer lag and event throughput metrics are monitored.
+1. Producers:
+   * Event producers publish events (e.g., user actions, system updates) to Kafka topics.
+2. Consumers:
+  * Kafka consumers process events from notification_events and route them to the appropriate notification channel (email, SMS, push).
+3. Dead-Letter Queue:
+  * Failed events are pushed to a retry topic for reprocessing.
+  * Consumers handle retry logic with exponential backoff.
+4. Multi-Channel Notification:
+  * Channels (email, SMS, push) are determined dynamically based on event metadata.
+  * Each channel has its own service for processing and delivery.
+5. Monitoring and Metrics:
+  * Kafka performance is tracked with Prometheus and visualized in Grafana.
+  * Consumer lag and event throughput metrics are monitored.
