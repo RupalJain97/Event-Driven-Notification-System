@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Event-Driven Notification System is a scalable and efficient system designed to handle real-time notifications using Apache Kafka. It enables multi-channel notifications such as email, SMS, and push notifications while ensuring high reliability and low latency. The system is built with Java, Spring Boot, and Kafka, leveraging advanced event-driven architecture principles to process and distribute notifications effectively.
+The Event-Driven Notification System is a scalable and efficient system designed to handle real-time notifications using Apache Kafka. It enables multi-channel notifications such as email, SMS, and push notifications while ensuring high reliability and low latency. The system will be built with Java, Spring Boot, and Kafka, leveraging advanced event-driven architecture principles to process and distribute notifications effectively.
 
 ## Features
 
@@ -22,12 +22,12 @@ The Event-Driven Notification System is a scalable and efficient system designed
    * Built on Apache Kafka’s distributed architecture to scale with increasing event volumes.
    * Ensures fault tolerance through topic replication and consumer group balancing.
 
-## Technologies Used
+## Technologies To Be Used
 
 * Programming Language: Java
 * Framework: Spring Boot
 * Streaming Platform: Apache Kafka
-* Database: PostgreSQL (optional for logging notifications)
+* Database: PostgreSQL <!-- (optional for logging notifications) -->
 * APIs: Twilio for SMS, JavaMail for email notifications
 * Monitoring: Prometheus and Grafana for Kafka metrics
 * Deployment: Docker
